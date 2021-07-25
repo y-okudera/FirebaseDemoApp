@@ -18,21 +18,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0o-yp-ev7" customClass="SignInWithAppleButton" customModule="FirebaseDemoApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="426" width="382" height="44"/>
+                                <rect key="frame" x="107" y="426" width="200" height="44"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="RGI-kh-Vty"/>
+                                    <constraint firstAttribute="width" constant="200" id="zTp-ME-61x"/>
                                 </constraints>
                                 <connections>
                                     <action selector="tappedSignInWithApple:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YFF-cX-Gj9"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vir-eX-dHU" customClass="SignInWithGoogleButton" customModule="FirebaseDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="107" y="486" width="200" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GGS-Mi-ocq"/>
+                                    <constraint firstAttribute="width" constant="200" id="tFw-vL-HPw"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tappedSignInWithGoogle:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XQC-UA-k70"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="d0o-yp-ev7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Qet-yT-zTC"/>
                             <constraint firstItem="d0o-yp-ev7" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="c4M-RM-KKS"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="d0o-yp-ev7" secondAttribute="trailing" constant="16" id="ygY-C0-94k"/>
+                            <constraint firstItem="Vir-eX-dHU" firstAttribute="top" secondItem="d0o-yp-ev7" secondAttribute="bottom" constant="16" id="iDw-3L-0xw"/>
+                            <constraint firstItem="d0o-yp-ev7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="s1n-Se-gLH"/>
+                            <constraint firstItem="Vir-eX-dHU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="yOK-9g-nLV"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -41,11 +54,6 @@
             <point key="canvasLocation" x="139" y="138"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="d0o-yp-ev7">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

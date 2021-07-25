@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '13.0'
 
 target 'FirebaseDemoApp' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -13,5 +13,6 @@ target 'FirebaseDemoApp' do
 
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
+  pod 'GoogleSignIn'
 
 end

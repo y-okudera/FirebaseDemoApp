@@ -9,21 +9,9 @@ import UIKit
 import AuthenticationServices
 
 /// Sign in with AppleボタンをStoryboardから設定できるようにしたカスタムボタン
-@IBDesignable
 final class SignInWithAppleButton: UIButton {
 
     private var appleIDButton: ASAuthorizationAppleIDButton!
-
-    @IBInspectable
-    var cornerRadius: CGFloat = 6.0
-
-    @IBInspectable
-    var type: Int = ASAuthorizationAppleIDButton.ButtonType.default.rawValue
-
-    @IBInspectable
-    var style: Int = UITraitCollection.current.userInterfaceStyle == .dark
-        ? ASAuthorizationAppleIDButton.Style.white.rawValue
-        : ASAuthorizationAppleIDButton.Style.black.rawValue
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,10 +24,10 @@ final class SignInWithAppleButton: UIButton {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
 
-        let type = ASAuthorizationAppleIDButton.ButtonType(rawValue: self.type) ?? .default
-        let style = ASAuthorizationAppleIDButton.Style(rawValue: self.style) ?? .black
+        let type = ASAuthorizationAppleIDButton.ButtonType.default
+        let style: ASAuthorizationAppleIDButton.Style = UITraitCollection.current.userInterfaceStyle == .dark ? .white : .black
         self.appleIDButton = ASAuthorizationAppleIDButton(authorizationButtonType: type, authorizationButtonStyle: style)
-        self.appleIDButton.cornerRadius = self.cornerRadius
+        self.appleIDButton.cornerRadius = 6.0
 
         addSubview(self.appleIDButton)
 

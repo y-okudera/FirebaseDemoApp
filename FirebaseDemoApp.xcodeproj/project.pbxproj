@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2557C44790D2BAC762A29468 /* Pods_FirebaseDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A739C7886E5476463D47CC /* Pods_FirebaseDemoApp.framework */; };
+		B604CC6D26ADBB3500B4BABF /* SignInWithGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604CC6C26ADBB3500B4BABF /* SignInWithGoogle.swift */; };
+		B604CC6F26ADBBA900B4BABF /* GoogleSignInPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604CC6E26ADBBA900B4BABF /* GoogleSignInPresentation.swift */; };
+		B604CC7226ADC5DF00B4BABF /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604CC7126ADC5DF00B4BABF /* SignIn.swift */; };
 		B61297372688F22A00B1AC44 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61297362688F22A00B1AC44 /* FirebaseHelper.swift */; };
 		B61297392688FD6D00B1AC44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B61297382688FD6D00B1AC44 /* GoogleService-Info.plist */; };
 		B612973B268A1E1900B1AC44 /* RemoteConfig-default.plist in Resources */ = {isa = PBXBuildFile; fileRef = B612973A268A1E1900B1AC44 /* RemoteConfig-default.plist */; };
@@ -27,11 +30,15 @@
 		B6B486BB26AC626F00664D1F /* UserProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B486BA26AC626F00664D1F /* UserProfileViewController.storyboard */; };
 		B6B486BF26AC72EC00664D1F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B486BE26AC72EC00664D1F /* HomeViewController.swift */; };
 		B6B486C126AC72F400664D1F /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B486C026AC72F400664D1F /* HomeViewController.storyboard */; };
+		B6B486C426AD429200664D1F /* SignInWithGoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B486C326AD429200664D1F /* SignInWithGoogleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		651ECC1D5BC035F20AB4F9E0 /* Pods-FirebaseDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseDemoApp.release.xcconfig"; path = "Target Support Files/Pods-FirebaseDemoApp/Pods-FirebaseDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		A96FF409C6BC7CBA3AA825AD /* Pods-FirebaseDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseDemoApp/Pods-FirebaseDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B604CC6C26ADBB3500B4BABF /* SignInWithGoogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithGoogle.swift; sourceTree = "<group>"; };
+		B604CC6E26ADBBA900B4BABF /* GoogleSignInPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInPresentation.swift; sourceTree = "<group>"; };
+		B604CC7126ADC5DF00B4BABF /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		B61297362688F22A00B1AC44 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		B61297382688FD6D00B1AC44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B612973A268A1E1900B1AC44 /* RemoteConfig-default.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RemoteConfig-default.plist"; sourceTree = "<group>"; };
@@ -54,6 +61,7 @@
 		B6B486BA26AC626F00664D1F /* UserProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfileViewController.storyboard; sourceTree = "<group>"; };
 		B6B486BE26AC72EC00664D1F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B6B486C026AC72F400664D1F /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		B6B486C326AD429200664D1F /* SignInWithGoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithGoogleButton.swift; sourceTree = "<group>"; };
 		E0A739C7886E5476463D47CC /* Pods_FirebaseDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +94,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B604CC6B26ADBA6B00B4BABF /* SignInWithGoogle */ = {
+			isa = PBXGroup;
+			children = (
+				B604CC6E26ADBBA900B4BABF /* GoogleSignInPresentation.swift */,
+				B604CC6C26ADBB3500B4BABF /* SignInWithGoogle.swift */,
+			);
+			path = SignInWithGoogle;
+			sourceTree = "<group>";
+		};
+		B604CC7026ADC5BE00B4BABF /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				B604CC7126ADC5DF00B4BABF /* SignIn.swift */,
+				B66DF7F726AC233A00D760F4 /* SignInWithApple */,
+				B604CC6B26ADBA6B00B4BABF /* SignInWithGoogle */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		B612973C268A1FD500B1AC44 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,12 +134,12 @@
 		B66DF7A826ABE22600D760F4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				B66DF7F426AC0D2000D760F4 /* Logger */,
 				B694010A2688D0A7004304C5 /* AppDelegate.swift */,
 				B66DF7EF26ABEE7900D760F4 /* FirebaseDemoApp.entitlements */,
 				B61297382688FD6D00B1AC44 /* GoogleService-Info.plist */,
 				B69401182688D0A8004304C5 /* Info.plist */,
 				B69401152688D0A8004304C5 /* LaunchScreen.storyboard */,
+				B66DF7F426AC0D2000D760F4 /* Logger */,
 				B694010C2688D0A7004304C5 /* SceneDelegate.swift */,
 			);
 			path = Application;
@@ -131,8 +158,8 @@
 		B66DF7AA26ABE26B00D760F4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B66DF7AE26ABE30C00D760F4 /* LoginViewController.swift */,
 				B66DF7B026ABE31200D760F4 /* LoginViewController.storyboard */,
+				B66DF7AE26ABE30C00D760F4 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -140,8 +167,8 @@
 		B66DF7AB26ABE27300D760F4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B6B486BE26AC72EC00664D1F /* HomeViewController.swift */,
 				B6B486C026AC72F400664D1F /* HomeViewController.storyboard */,
+				B6B486BE26AC72EC00664D1F /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -157,8 +184,8 @@
 		B66DF7AD26ABE29D00D760F4 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				B66DF7AA26ABE26B00D760F4 /* Login */,
 				B66DF7AB26ABE27300D760F4 /* Home */,
+				B66DF7AA26ABE26B00D760F4 /* Login */,
 				B6B486B726AC625200664D1F /* UserProfile */,
 			);
 			path = Screen;
@@ -169,6 +196,7 @@
 			children = (
 				B612973C268A1FD500B1AC44 /* Extensions */,
 				B66DF7F126AC055D00D760F4 /* SignInWithAppleButton */,
+				B6B486C226AD428400664D1F /* SignInWithGoogleButton */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -253,8 +281,8 @@
 		B6B486B726AC625200664D1F /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
-				B6B486B826AC626700664D1F /* UserProfileViewController.swift */,
 				B6B486BA26AC626F00664D1F /* UserProfileViewController.storyboard */,
+				B6B486B826AC626700664D1F /* UserProfileViewController.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -263,9 +291,17 @@
 			isa = PBXGroup;
 			children = (
 				B6129740268A268100B1AC44 /* Firebase */,
-				B66DF7F726AC233A00D760F4 /* SignInWithApple */,
+				B604CC7026ADC5BE00B4BABF /* SignIn */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		B6B486C226AD428400664D1F /* SignInWithGoogleButton */ = {
+			isa = PBXGroup;
+			children = (
+				B6B486C326AD429200664D1F /* SignInWithGoogleButton.swift */,
+			);
+			path = SignInWithGoogleButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,14 +426,18 @@
 				B66DF7AF26ABE30C00D760F4 /* LoginViewController.swift in Sources */,
 				B61297372688F22A00B1AC44 /* FirebaseHelper.swift in Sources */,
 				B694010B2688D0A7004304C5 /* AppDelegate.swift in Sources */,
+				B604CC6D26ADBB3500B4BABF /* SignInWithGoogle.swift in Sources */,
 				B66DF7F926AC237100D760F4 /* SignInWithApple.swift in Sources */,
+				B604CC6F26ADBBA900B4BABF /* GoogleSignInPresentation.swift in Sources */,
 				B694010D2688D0A7004304C5 /* SceneDelegate.swift in Sources */,
 				B612973E268A1FE000B1AC44 /* UIColor+.swift in Sources */,
 				B66DF7FE26AC4F9F00D760F4 /* SignInResult.swift in Sources */,
 				B6129743268A26AA00B1AC44 /* RemoteConfigKey.swift in Sources */,
 				B6B486B926AC626700664D1F /* UserProfileViewController.swift in Sources */,
+				B6B486C426AD429200664D1F /* SignInWithGoogleButton.swift in Sources */,
 				B66DF7F626AC0D2900D760F4 /* Logger.swift in Sources */,
 				B6B486BF26AC72EC00664D1F /* HomeViewController.swift in Sources */,
+				B604CC7226ADC5DF00B4BABF /* SignIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

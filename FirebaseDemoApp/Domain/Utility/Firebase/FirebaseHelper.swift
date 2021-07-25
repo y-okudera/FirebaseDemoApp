@@ -16,9 +16,15 @@ final class FirebaseHelper {
 
     private(set) var remoteConfig = RemoteConfig.remoteConfig()
 
+    /// didFinishLaunchingWithOptionsで呼び出す初期処理
     func configure() {
         setup()
         setupRemoteConfig()
+    }
+
+    /// Google Sign Inで使用するクライアントID
+    var clientID: String? {
+        FirebaseApp.app()?.options.clientID
     }
 
     /// インストール認証トークンを取得
@@ -44,19 +50,16 @@ final class FirebaseHelper {
     func signIn(appleIDToken: String, nonce: String, completion: @escaping (Result<AuthDataResult?, Error>) -> Void) {
         // Initialize a Firebase credential.
         let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: appleIDToken, rawNonce: nonce)
+        self.signIn(credential: credential, completion: completion)
+    }
 
-        Auth.auth().signIn(with: credential) { authResult, error in
-            if let error = error {
-                // Error. If error.code == .MissingOrInvalidNonce, make sure
-                // you're sending the SHA256-hashed nonce as a hex string with
-                // your request to Apple.
-                Logger.error("signIn Error", error.localizedDescription)
-                completion(.failure(error))
-                return
-            }
-            // User is signed in to Firebase with Apple.
-            completion(.success(authResult))
-        }
+    /// Google authenticationのトークンを使用して、Firebaseにサインインする
+    ///
+    /// SignInWithGoogle処理で使用する
+    func signIn(googleIDToken: String, accessToken: String, completion: @escaping (Result<AuthDataResult?, Error>) -> Void) {
+        // Initialize a Firebase credential.
+        let credential = GoogleAuthProvider.credential(withIDToken: googleIDToken, accessToken: accessToken)
+        self.signIn(credential: credential, completion: completion)
     }
 
     /// FirebaseのユーザープロフィールのdisplayNameを更新する
@@ -86,5 +89,21 @@ extension FirebaseHelper {
         remoteConfig = RemoteConfig.remoteConfig()
         remoteConfig.setDefaults(fromPlist: "RemoteConfig-default")
         remoteConfig.configSettings = RemoteConfigSettings()
+    }
+
+    /// Firebaseにサインインする
+    private func signIn(credential: AuthCredential, completion: @escaping (Result<AuthDataResult?, Error>) -> Void) {
+        Auth.auth().signIn(with: credential) { authResult, error in
+            if let error = error {
+                // Error. If error.code == .MissingOrInvalidNonce, make sure
+                // you're sending the SHA256-hashed nonce as a hex string with
+                // your request to Apple.
+                Logger.error("signIn Error", error.localizedDescription)
+                completion(.failure(error))
+                return
+            }
+            // User is signed in to Firebase with Apple.
+            completion(.success(authResult))
+        }
     }
 }

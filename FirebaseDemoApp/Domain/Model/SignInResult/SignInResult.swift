@@ -9,22 +9,27 @@ import AuthenticationServices
 import Firebase
 
 struct SignInResult {
-    /// SignInWithApple処理の結果
-    let signInWithAppleResult: SignInWithAppleResult
+    /// サインインの種類
+    let signInType: SignInType
 
     /// SignInWithApple処理後のFirebaseのサインイン処理の結果
     let signInWithFirebaseResult: SignInWithFirebaseResult
 
-    init?(appleIDCredential: ASAuthorizationAppleIDCredential, authResult: AuthDataResult?) {
+    init?(signInType: SignInType, authResult: AuthDataResult?) {
         guard let authResult = authResult else {
             return nil
         }
-        self.signInWithAppleResult = .init(appleIDCredential: appleIDCredential)
+        self.signInType = signInType
         self.signInWithFirebaseResult = .init(authResult: authResult)
     }
 }
 
 extension SignInResult {
+
+    enum SignInType {
+        case apple(SignInWithAppleResult)
+        case google
+    }
 
     struct SignInWithAppleResult {
         let displayName: String?

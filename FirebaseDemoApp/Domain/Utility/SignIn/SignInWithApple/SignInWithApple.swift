@@ -10,14 +10,9 @@
 import AuthenticationServices
 import CryptoKit
 
-protocol SignInWithAppleDelegate: AnyObject {
-    func signInWithApple(_ signInWithApple: SignInWithApple, didComplete result: SignInResult)
-    func signInWithApple(_ signInWithApple: SignInWithApple, errorOccurred error: Error?)
-}
+final class SignInWithApple: NSObject, SignIn {
 
-final class SignInWithApple: NSObject {
-
-    weak var delegate: SignInWithAppleDelegate?
+    weak var delegate: SignInDelegate?
 
     /// Unhashed nonce.
     var currentNonce: String?
@@ -37,7 +32,9 @@ final class SignInWithApple: NSObject {
         super.init()
     }
 
-    func startSignInFlow() {
+    func startSignInFlow(delegate: SignInDelegate?) {
+        self.delegate = delegate
+
         let nonce = randomNonceString()
         currentNonce = nonce
         let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -102,22 +99,22 @@ extension SignInWithApple: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         guard let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential else {
             Logger.error("ASAuthorizationAppleIDCredential is nil.")
-            self.delegate?.signInWithApple(self, errorOccurred: nil)
+            self.delegate?.signIn(self, errorOccurred: nil)
             return
         }
         guard let nonce = currentNonce else {
             Logger.error("Invalid state: A login callback was received, but no login request was sent.")
-            self.delegate?.signInWithApple(self, errorOccurred: nil)
+            self.delegate?.signIn(self, errorOccurred: nil)
             return
         }
         guard let appleIDToken = appleIDCredential.identityToken else {
             Logger.error("Unable to fetch identity token")
-            self.delegate?.signInWithApple(self, errorOccurred: nil)
+            self.delegate?.signIn(self, errorOccurred: nil)
             return
         }
         guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
             Logger.error("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
-            self.delegate?.signInWithApple(self, errorOccurred: nil)
+            self.delegate?.signIn(self, errorOccurred: nil)
             return
         }
 
@@ -130,15 +127,15 @@ extension SignInWithApple: ASAuthorizationControllerDelegate {
             switch result {
             case .failure(let error):
                 Logger.debug("error: \(error)")
-                self.delegate?.signInWithApple(self, errorOccurred: error)
+                self.delegate?.signIn(self, errorOccurred: error)
             case .success(let authResult):
-                guard let signInResult = SignInResult(appleIDCredential: appleIDCredential, authResult: authResult) else {
+                guard let signInResult = SignInResult(signInType: .apple(.init(appleIDCredential: appleIDCredential)), authResult: authResult) else {
                     Logger.error("signInResult is nil.")
-                    self.delegate?.signInWithApple(self, errorOccurred: nil)
+                    self.delegate?.signIn(self, errorOccurred: nil)
                     return
                 }
                 Logger.debug("Signed in to Firebase with Apple!!")
-                self.delegate?.signInWithApple(self, didComplete: signInResult)
+                self.delegate?.signIn(self, didComplete: signInResult)
             }
         }
     }
@@ -150,7 +147,7 @@ extension SignInWithApple: ASAuthorizationControllerDelegate {
             return
         }
         Logger.error("Sign in with Apple errored: \(error)")
-        self.delegate?.signInWithApple(self, errorOccurred: error)
+        self.delegate?.signIn(self, errorOccurred: error)
     }
 }
 
@@ -158,6 +155,6 @@ extension SignInWithApple: ASAuthorizationControllerDelegate {
 extension SignInWithApple: ASAuthorizationControllerPresentationContextProviding {
 
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return presentationAnchor
+        return self.presentationAnchor
     }
 }
