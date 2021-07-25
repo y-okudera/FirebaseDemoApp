@@ -22,7 +22,7 @@ Presentation/
 
 - [x] Firebase Authentication
   - [x] Sign in with Apple
-  - [ ] Google Sign-In 
+  - [x] Google Sign-In 
 - [x] Firebase RemoteConfig
   - [x] Firebase RemoteConfigのセットアップ
   - [ ] Firebase RemoteConfigの呼び出し
