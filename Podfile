@@ -8,6 +8,10 @@ target 'FirebaseDemoApp' do
   # Pods for FirebaseDemoApp
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'
+  
   pod 'Firebase/RemoteConfig'
+
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
 
 end

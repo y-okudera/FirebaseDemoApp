@@ -13,12 +13,20 @@
 		B612973B268A1E1900B1AC44 /* RemoteConfig-default.plist in Resources */ = {isa = PBXBuildFile; fileRef = B612973A268A1E1900B1AC44 /* RemoteConfig-default.plist */; };
 		B612973E268A1FE000B1AC44 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B612973D268A1FE000B1AC44 /* UIColor+.swift */; };
 		B6129743268A26AA00B1AC44 /* RemoteConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6129742268A26AA00B1AC44 /* RemoteConfigKey.swift */; };
+		B66DF7AF26ABE30C00D760F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66DF7AE26ABE30C00D760F4 /* LoginViewController.swift */; };
+		B66DF7B126ABE31200D760F4 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66DF7B026ABE31200D760F4 /* LoginViewController.storyboard */; };
+		B66DF7F326AC056E00D760F4 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66DF7F226AC056E00D760F4 /* SignInWithAppleButton.swift */; };
+		B66DF7F626AC0D2900D760F4 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66DF7F526AC0D2900D760F4 /* Logger.swift */; };
+		B66DF7F926AC237100D760F4 /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66DF7F826AC237100D760F4 /* SignInWithApple.swift */; };
+		B66DF7FE26AC4F9F00D760F4 /* SignInResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66DF7FD26AC4F9F00D760F4 /* SignInResult.swift */; };
 		B694010B2688D0A7004304C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694010A2688D0A7004304C5 /* AppDelegate.swift */; };
 		B694010D2688D0A7004304C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694010C2688D0A7004304C5 /* SceneDelegate.swift */; };
-		B694010F2688D0A7004304C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694010E2688D0A7004304C5 /* ViewController.swift */; };
-		B69401122688D0A7004304C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69401102688D0A7004304C5 /* Main.storyboard */; };
 		B69401142688D0A8004304C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69401132688D0A8004304C5 /* Assets.xcassets */; };
 		B69401172688D0A8004304C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B69401152688D0A8004304C5 /* LaunchScreen.storyboard */; };
+		B6B486B926AC626700664D1F /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B486B826AC626700664D1F /* UserProfileViewController.swift */; };
+		B6B486BB26AC626F00664D1F /* UserProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B486BA26AC626F00664D1F /* UserProfileViewController.storyboard */; };
+		B6B486BF26AC72EC00664D1F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B486BE26AC72EC00664D1F /* HomeViewController.swift */; };
+		B6B486C126AC72F400664D1F /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B486C026AC72F400664D1F /* HomeViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,14 +37,23 @@
 		B612973A268A1E1900B1AC44 /* RemoteConfig-default.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RemoteConfig-default.plist"; sourceTree = "<group>"; };
 		B612973D268A1FE000B1AC44 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		B6129742268A26AA00B1AC44 /* RemoteConfigKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigKey.swift; sourceTree = "<group>"; };
+		B66DF7AE26ABE30C00D760F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B66DF7B026ABE31200D760F4 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		B66DF7EF26ABEE7900D760F4 /* FirebaseDemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseDemoApp.entitlements; sourceTree = "<group>"; };
+		B66DF7F226AC056E00D760F4 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		B66DF7F526AC0D2900D760F4 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B66DF7F826AC237100D760F4 /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
+		B66DF7FD26AC4F9F00D760F4 /* SignInResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResult.swift; sourceTree = "<group>"; };
 		B69401072688D0A7004304C5 /* FirebaseDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B694010A2688D0A7004304C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B694010C2688D0A7004304C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B694010E2688D0A7004304C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B69401112688D0A7004304C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B69401132688D0A8004304C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B69401162688D0A8004304C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B69401182688D0A8004304C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6B486B826AC626700664D1F /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		B6B486BA26AC626F00664D1F /* UserProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfileViewController.storyboard; sourceTree = "<group>"; };
+		B6B486BE26AC72EC00664D1F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B6B486C026AC72F400664D1F /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		E0A739C7886E5476463D47CC /* Pods_FirebaseDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,30 +94,132 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B612973F268A266A00B1AC44 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				B6129740268A268100B1AC44 /* Firebase */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
 		B6129740268A268100B1AC44 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				B6129741268A269900B1AC44 /* RemoteConfigKey */,
 				B61297362688F22A00B1AC44 /* FirebaseHelper.swift */,
 				B612973A268A1E1900B1AC44 /* RemoteConfig-default.plist */,
+				B6129742268A26AA00B1AC44 /* RemoteConfigKey.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		B6129741268A269900B1AC44 /* RemoteConfigKey */ = {
+		B66DF7A826ABE22600D760F4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				B6129742268A26AA00B1AC44 /* RemoteConfigKey.swift */,
+				B66DF7F426AC0D2000D760F4 /* Logger */,
+				B694010A2688D0A7004304C5 /* AppDelegate.swift */,
+				B66DF7EF26ABEE7900D760F4 /* FirebaseDemoApp.entitlements */,
+				B61297382688FD6D00B1AC44 /* GoogleService-Info.plist */,
+				B69401182688D0A8004304C5 /* Info.plist */,
+				B69401152688D0A8004304C5 /* LaunchScreen.storyboard */,
+				B694010C2688D0A7004304C5 /* SceneDelegate.swift */,
 			);
-			path = RemoteConfigKey;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B66DF7A926ABE25800D760F4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B66DF7AC26ABE28000D760F4 /* Resources */,
+				B66DF7AD26ABE29D00D760F4 /* Screen */,
+				B66DF7F026AC051900D760F4 /* Utility */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B66DF7AA26ABE26B00D760F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B66DF7AE26ABE30C00D760F4 /* LoginViewController.swift */,
+				B66DF7B026ABE31200D760F4 /* LoginViewController.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B66DF7AB26ABE27300D760F4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B6B486BE26AC72EC00664D1F /* HomeViewController.swift */,
+				B6B486C026AC72F400664D1F /* HomeViewController.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B66DF7AC26ABE28000D760F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B69401132688D0A8004304C5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B66DF7AD26ABE29D00D760F4 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B66DF7AA26ABE26B00D760F4 /* Login */,
+				B66DF7AB26ABE27300D760F4 /* Home */,
+				B6B486B726AC625200664D1F /* UserProfile */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		B66DF7F026AC051900D760F4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B612973C268A1FD500B1AC44 /* Extensions */,
+				B66DF7F126AC055D00D760F4 /* SignInWithAppleButton */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		B66DF7F126AC055D00D760F4 /* SignInWithAppleButton */ = {
+			isa = PBXGroup;
+			children = (
+				B66DF7F226AC056E00D760F4 /* SignInWithAppleButton.swift */,
+			);
+			path = SignInWithAppleButton;
+			sourceTree = "<group>";
+		};
+		B66DF7F426AC0D2000D760F4 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				B66DF7F526AC0D2900D760F4 /* Logger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		B66DF7F726AC233A00D760F4 /* SignInWithApple */ = {
+			isa = PBXGroup;
+			children = (
+				B66DF7F826AC237100D760F4 /* SignInWithApple.swift */,
+			);
+			path = SignInWithApple;
+			sourceTree = "<group>";
+		};
+		B66DF7FA26AC4F7600D760F4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B66DF7FB26AC4F8400D760F4 /* Model */,
+				B6B486BD26AC723F00664D1F /* Utility */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B66DF7FB26AC4F8400D760F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B66DF7FC26AC4F9000D760F4 /* SignInResult */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B66DF7FC26AC4F9000D760F4 /* SignInResult */ = {
+			isa = PBXGroup;
+			children = (
+				B66DF7FD26AC4F9F00D760F4 /* SignInResult.swift */,
+			);
+			path = SignInResult;
 			sourceTree = "<group>";
 		};
 		B69400FE2688D0A7004304C5 = {
@@ -124,18 +243,29 @@
 		B69401092688D0A7004304C5 /* FirebaseDemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				B612973F268A266A00B1AC44 /* Utility */,
-				B612973C268A1FD500B1AC44 /* Extensions */,
-				B694010A2688D0A7004304C5 /* AppDelegate.swift */,
-				B694010C2688D0A7004304C5 /* SceneDelegate.swift */,
-				B694010E2688D0A7004304C5 /* ViewController.swift */,
-				B69401102688D0A7004304C5 /* Main.storyboard */,
-				B69401132688D0A8004304C5 /* Assets.xcassets */,
-				B69401152688D0A8004304C5 /* LaunchScreen.storyboard */,
-				B69401182688D0A8004304C5 /* Info.plist */,
-				B61297382688FD6D00B1AC44 /* GoogleService-Info.plist */,
+				B66DF7A826ABE22600D760F4 /* Application */,
+				B66DF7FA26AC4F7600D760F4 /* Domain */,
+				B66DF7A926ABE25800D760F4 /* Presentation */,
 			);
 			path = FirebaseDemoApp;
+			sourceTree = "<group>";
+		};
+		B6B486B726AC625200664D1F /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				B6B486B826AC626700664D1F /* UserProfileViewController.swift */,
+				B6B486BA26AC626F00664D1F /* UserProfileViewController.storyboard */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		B6B486BD26AC723F00664D1F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B6129740268A268100B1AC44 /* Firebase */,
+				B66DF7F726AC233A00D760F4 /* SignInWithApple */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,11 +327,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B486BB26AC626F00664D1F /* UserProfileViewController.storyboard in Resources */,
 				B69401172688D0A8004304C5 /* LaunchScreen.storyboard in Resources */,
+				B6B486C126AC72F400664D1F /* HomeViewController.storyboard in Resources */,
 				B612973B268A1E1900B1AC44 /* RemoteConfig-default.plist in Resources */,
 				B61297392688FD6D00B1AC44 /* GoogleService-Info.plist in Resources */,
+				B66DF7B126ABE31200D760F4 /* LoginViewController.storyboard in Resources */,
 				B69401142688D0A8004304C5 /* Assets.xcassets in Resources */,
-				B69401122688D0A7004304C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,26 +386,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66DF7F326AC056E00D760F4 /* SignInWithAppleButton.swift in Sources */,
+				B66DF7AF26ABE30C00D760F4 /* LoginViewController.swift in Sources */,
 				B61297372688F22A00B1AC44 /* FirebaseHelper.swift in Sources */,
-				B694010F2688D0A7004304C5 /* ViewController.swift in Sources */,
 				B694010B2688D0A7004304C5 /* AppDelegate.swift in Sources */,
+				B66DF7F926AC237100D760F4 /* SignInWithApple.swift in Sources */,
 				B694010D2688D0A7004304C5 /* SceneDelegate.swift in Sources */,
 				B612973E268A1FE000B1AC44 /* UIColor+.swift in Sources */,
+				B66DF7FE26AC4F9F00D760F4 /* SignInResult.swift in Sources */,
 				B6129743268A26AA00B1AC44 /* RemoteConfigKey.swift in Sources */,
+				B6B486B926AC626700664D1F /* UserProfileViewController.swift in Sources */,
+				B66DF7F626AC0D2900D760F4 /* Logger.swift in Sources */,
+				B6B486BF26AC72EC00664D1F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B69401102688D0A7004304C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B69401112688D0A7004304C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B69401152688D0A8004304C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -407,10 +537,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FirebaseDemoApp/Application/FirebaseDemoApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
-				INFOPLIST_FILE = FirebaseDemoApp/Info.plist;
+				INFOPLIST_FILE = FirebaseDemoApp/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -430,10 +561,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FirebaseDemoApp/Application/FirebaseDemoApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
-				INFOPLIST_FILE = FirebaseDemoApp/Info.plist;
+				INFOPLIST_FILE = FirebaseDemoApp/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
